@@ -93,12 +93,12 @@ namespace GY
                     icon = iconContent.image as Texture2D;
                 }
             
-            // 아이콘이 null이 아니면 아이콘을 그립니다.
+            // 아이콘이 null이 아니면 아이콘을 그림
             if(icon != null)
             {
                 GUI.DrawTexture(rect, icon);
             }
-            // 아이콘이 null인 경우, 적절한 처리를 수행합니다. 
+            // 아이콘이 null인 경우 
             // else
             // {
             //     Debug.Log("Icon could not be loaded: " + iconName);

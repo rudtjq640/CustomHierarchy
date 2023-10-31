@@ -44,11 +44,11 @@ namespace GY
                 {
                     foreach(var selectedObject in Selection.gameObjects)
                     {
-                        // 새 아이콘을 적용합니다.
+                        // 새 아이콘을 적용
                         var icon = AssetDatabase.LoadAssetAtPath<Texture2D>(iconFile);
                         HierarchyIconManager.ApplyIconByInstanceId(selectedObject.GetInstanceID(), icon);
             
-                        // 새 아이콘 정보를 PlayerPrefs에 저장합니다.
+                        // 새 아이콘 정보를 PlayerPrefs에 저장
                         PlayerPrefs.SetString(selectedObject.GetInstanceID().ToString(), iconFile);
                     }
                 }
