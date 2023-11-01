@@ -10,10 +10,17 @@ namespace GY
         {
             {"[ Light ]", ("Light Icon", new Color(1f, 0.5f, 0f, 0.5f))},
             {"[ Volume ]", ("LightProbeProxyVolume Gizmo", new Color(0.2f, 1f, 0.18f, 0.5f))},
-            {"[ Timeline ]", ("TimelineAsset Icon", new Color(0f, 0f, 1f, 0.5f))},
+            {"[ Timeline ]", ("TimelineAsset Icon", new Color(0f, 1f, .5f, 0.3f))},
             {"[ Camera ]", ("Camera Gizmo", new Color(0f, 0.12f, 1f, 0.5f))},
             {"[ Magaica ]", ("Assets/HierarchyEditor/MyIcons/10. Magaica_icon_cloth.png", new Color(1f, 0f, 0f, 0.5f))},
-            {"[ Recorder ]", ("Animation.Record", new Color(0f, 0.5f, 0.5f, 0.5f))}
+            {"[ Recorder ]", ("Animation.Record", new Color(1f, 0.75f, 0.45f, 0.5f))},
+            {"[ Avatar ]", ("Avatar Icon", new Color(0.5f, 0f, 1f, 0.5f))},
+            {"[ Scripts ]", ("Script Icon", new Color(0.81f, 0.91f, 0.8f, 0.5f))},
+            {"[ Mesh ]", ("Mesh Icon", new Color(0.5f, 0.5f, 1f, 0.5f))},
+            {"[ Button ]", ("Button Icon", new Color(0.5f, 0.5f, 1f, 0.5f))},
+            {"[ Image ]", ("Sprite Icon", new Color(0.5f, 0.5f, 1f, 0.5f))},
+
+
             // 첫번째 문자열은 지정하고 싶은 문구를
             // 두번째 문자열은 지정하고 싶은 아이콘의 파일명 혹은 경로를
             // 세번째 문자열은 컬러를 지정하여 원하는대로 값을 수정합니다.
@@ -93,12 +100,12 @@ namespace GY
                     icon = iconContent.image as Texture2D;
                 }
             
-            // 아이콘이 null이 아니면 아이콘을 그림
+            // 아이콘이 null이 아니면 아이콘을 그립니다.
             if(icon != null)
             {
                 GUI.DrawTexture(rect, icon);
             }
-            // 아이콘이 null인 경우 
+            // 아이콘이 null인 경우, 적절한 처리를 수행합니다. 
             // else
             // {
             //     Debug.Log("Icon could not be loaded: " + iconName);
